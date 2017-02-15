@@ -1,10 +1,7 @@
-from django.http import Http404
-from django.http import HttpResponseRedirect, HttpResponse
+from django.http import HttpResponseRedirect
 from django.shortcuts import get_object_or_404, render
 from django.urls import reverse
-from django.template import loader
-
-from .models import Choice, Question, QuestionForm
+from .models import Choice, Question, OpenQuestion, OpenQuestionForm
 
 
 def index(request):
@@ -30,12 +27,13 @@ def vote(request, question_id):
         return HttpResponseRedirect(reverse('test:results', args=(question.id,)))
 
 def questions(request):
-    question_form = QuestionForm
+    question = OpenQuestion
+    question_form = OpenQuestionForm(instance=question)
     if request.method=='POST':
-        name = request.POST.get('name')
-        email = request.POST.get('email')
-        content = request.POST.get('content')
-        print "SAVING QUESTION TO DATABSE: Name= " + name + " Email= "+ email + "Content= "+ content
+        question_form = OpenQuestionForm(request.POST)
+        question_form.save()
+        print "SAVING QUESTION TO DATABASE: Name= " + request.POST.get('name') + " Email= "+ request.POST.get('email') + " Content= "+ request.POST.get('content')
+        return HttpResponseRedirect('test/index.html')
     return render(request, 'test/questions.html', {
         'form': question_form,
     })
