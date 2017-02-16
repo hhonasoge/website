@@ -10,3 +10,4 @@ settings.py
 urls.py
 wsgi.py
 test
+ebdjango/.elasticbeanstalk
