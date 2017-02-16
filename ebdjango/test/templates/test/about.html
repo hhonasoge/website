@@ -1,6 +1,7 @@
 {% load static %}
 <script src="{% static "test/js/about.js" %}"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="{% static 'test/css/about.css' %}" />
 <div>
 About us:
 <p>
@@ -11,17 +12,17 @@ This website was created by Garrett, Harsha, and Bharat. We want to provide peop
 
 <div style="height:500px;width:500px;position:absolute;margin:-250px -250px 0 -250px; left:50%; top:50%;">
 <div id="nyt">
-<a href="nytimes.com">
+<a href="https://nytimes.com">
 <img class="image" src="{% static "test/images/nyt-banner.jpg" %}" alt="New York Times" style="margin:0 auto 0 auto;">
 </a>
 </div>
 <div id="wsj">
-<a href="wsj.com">
+<a href="https://wsj.com">
 <img class="image" src="{% static "test/images/wsj-banner.png" %}" alt="Wall Street Journal" style="margin:0 auto 0 auto;">
 </a>
 </div>
 <div id="npr">
-<a href="npr.org">
+<a href="https://npr.org">
 <img class="image" src="{% static "test/images/npr-banner.jpg" %}" alt="National Public Radio" style="margin-left:auto;margin-right:auto;">
 </a>
 </div>
