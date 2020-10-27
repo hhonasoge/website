@@ -9,7 +9,7 @@ cement==2.8.2
 certifi==2016.9.26
 cffi==1.9.1
 colorama==0.3.7
-cryptography==1.7.1
+cryptography==3.2
 Django==1.10.5
 docker-py==1.7.2
 dockerpty==0.4.1
