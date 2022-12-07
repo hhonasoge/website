@@ -6,7 +6,7 @@ blessed==1.9.5
 bonjour-py==0.3
 botocore==1.5.3
 cement==2.8.2
-certifi==2016.9.26
+certifi==2022.12.7
 cffi==1.9.1
 colorama==0.3.7
 cryptography==1.7.1
